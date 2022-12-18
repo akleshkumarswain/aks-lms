@@ -1,0 +1,107 @@
+<div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+    Click me to open/close the sidebar
+</div>
+
+<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+  <div
+      class="sidebar-close"
+      (click)="sidebarShow = !sidebarShow"
+  >
+      X
+  </div>
+    <div class="sidebar-content">
+      <h2>Dashboard</h2>
+      <div routerLink="/login"  >logout</div>
+      <div  (click)=LaundryReport()   >Laundry Report</div>
+      <div  (click)=statusReport() >Request Status</div>
+    
+    </div>
+</div>
+
+
+<div class="card-body" *ngIf="showlaundryreport"   >
+    <form (submit)="submitdetails(userData)">
+        <div class="form-group">
+          <label for="name"></label>
+          <input type="text" name="name" class="form-control" placeholder="Name" [(ngModel)]="userData.name">
+        </div>
+        <div class="form-group">
+          <label for="phone"></label>
+          <input type="text" name="phone" class="form-control" placeholder="Phone" [(ngModel)]="userData.phone">
+        </div>
+        <div class="form-group">
+          <label for="email"> </label>
+          <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="userData.email">
+        </div>
+        <div class="form-group">
+            <label for="c_password"> </label>
+            <input type="text" name="topwear" class="form-control" placeholder="topwear" [(ngModel)]="userData.topwear">
+          </div>
+
+          <div class="form-group">
+            <label for="c_password"> </label>
+            <input type="text" name="bottomwear" class="form-control" placeholder="bottomwear" [(ngModel)]="userData.bottomwear">
+          </div>
+  
+        <div class="form-group">
+          <label for="password"> </label>
+          <input type="text" name="woolencloth" class="form-control" placeholder="Woolen Cloth" [(ngModel)]="userData.woolencloth">
+        </div>
+        <div class="form-group">
+          <label for="c_password"> </label>
+          <input type="text" name="pickupdate" class="form-control" placeholder="pickupdate" [(ngModel)]="userData.pickupdate">
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-my" value="Submit Request">
+        </div>
+      
+        
+    </form>
+    
+  </div>
+
+
+  <div   *ngIf="statusReports"   >
+
+    <div class="topdiv">
+      <div class="requestdiv"   *ngFor="let item of userrequest" [ngStyle]="{'background-color': item.colour}">
+        <div style="border: 1px solid rgb(56, 2, 2);height: 70%;width: 100%;border-radius: 10px;padding: 10px;" [ngStyle]="{'color':item.rerueststatusvalue=='1'?'red':'black'}">{{item.rerueststatusvalue}}&nbsp;&nbsp;{{item.rerueststatus}} </div>
+      
+       <div *ngIf="item.rerueststatus==status">
+        <h5> name-{{laundryrequestdata.name}}</h5>
+        <h5>phone- {{laundryrequestdata.phone}}</h5>
+        <h5>email- {{laundryrequestdata.email}}</h5>
+        <h5>topwear- {{laundryrequestdata.topwear}}</h5>
+        <h5>bottomwear- {{laundryrequestdata.bottomwear}}</h5>
+        <h5>woolencloth- {{laundryrequestdata.woolencloth}}</h5>
+        <h5>pickupdate- {{laundryrequestdata.pickupdate}}</h5>
+       </div>
+
+      </div>
+      
+    </div>
+
+
+
+
+
+
+
+    <div class="tablediv">
+      <table class="my-table">
+        <thead class="my-table headers">
+          <tr>
+            <th *ngFor="let column of tableheader">{{column}}</th>
+          </tr>
+        </thead>
+        <tbody class="my-table body">
+          <tr >
+            <td  *ngFor="let data of tabledata">{{data}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   
+  </div>
+
+

@@ -1,0 +1,104 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.sidebar-opener {
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.sidebar-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #44cdff;
+    transform: translateX(-100%);
+    transition: ease-in-out 300ms transform;
+    width: 300px;
+    z-index: 9999;
+}
+
+.sidebar-slider.sidebar-slide-in {
+    transform: translateX(0%);
+    transition: ease-in-out 600ms transform;
+    z-index: 9999;
+}
+
+.sidebar-close {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+    z-index: 9999;
+}
+
+.sidebar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    height: 100%;
+}
+.card-body{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    justify-self: center;
+}
+.form-group{
+    margin: 15px;
+    width: 30%;
+}
+th{
+    background-color:rgb(70, 6, 122) ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    
+}
+td{
+    background-color:rgb(104, 97, 97) ;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    
+}
+.tablediv{
+    position: absolute;
+    top: 80%;
+    left: 15%;
+}
+.requestdiv{
+    width: 150px;
+    height: 100px;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    
+}
+.topdiv{
+    position: absolute;
+    top: 10%;
+    display: flex;
+    flex-direction: row;
+    left: 15%;
+}
+h2{
+    color: black;
+    position: relative;
+    top: 3%;
+}
+h5{
+    font-size: 10px;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}

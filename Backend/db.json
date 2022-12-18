@@ -1,0 +1,76 @@
+{
+  "laudry": [
+    {
+      "email": "sainath@gmail.com",
+      "password": "1234",
+      "name": "A Sainath Patro",
+      "phone": "07788949197",
+      "topwear": "5",
+      "bottomwear": "2",
+      "woolencloth": "5",
+      "pickupdate": "12/12/59",
+      "id": 1
+    },
+    {
+      "email": "sainath@gmail.com",
+      "password": "1234",
+      "name": "raja",
+      "phone": "9632587410",
+      "topwear": "5",
+      "bottomwear": "2",
+      "woolencloth": "0",
+      "pickupdate": "12/12/22",
+      "id": 2
+    },
+    {
+      "email": "sainath@gmail.com",
+      "password": "1234",
+      "name": "akhil",
+      "phone": "458722",
+      "topwear": "5",
+      "bottomwear": "2",
+      "woolencloth": "1",
+      "pickupdate": "14-01-2023",
+      "id": 3
+    },
+    {
+      "email": "akleshkumar@gmail.com",
+      "password": "5949",
+      "name": "ajshu",
+      "phone": "45648",
+      "c_password": "5949",
+      "topwear": "5",
+      "bottomwear": "4",
+      "woolencloth": "3",
+      "pickupdate": "12-2-2023",
+      "id": 4
+    },
+    {
+      "email": "akleshkumar@gmail.com",
+      "password": "5949",
+      "name": "ashu",
+      "phone": "75466",
+      "c_password": "5949",
+      "topwear": "4",
+      "bottomwear": "9",
+      "woolencloth": "3",
+      "pickupdate": "4",
+      "id": 5
+    },
+    {
+      "email": "akleshkumar@gmail.com",
+      "password": "5949",
+      "name": "bhankt",
+      "phone": "753951",
+      "c_password": "5949",
+      "topwear": "1",
+      "bottomwear": "2",
+      "woolencloth": "4",
+      "pickupdate": "11",
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
